@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "Somani Family Cookbook"
+description = "A shared-feeling family cookbook where relatives can preserve recipes, photos, short videos, chef credits, and the stories behind every dish."
+version = "1.0.0"
+id = "artifacts/somani-cook-book"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 21540
+
+[services.development]
+run = "pnpm --filter @workspace/somani-cook-book run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/somani-cook-book", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/somani-cook-book", "run", "serve" ]
+
+[services.env]
+PORT = "21540"
+BASE_PATH = "/"
