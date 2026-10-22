@@ -1,0 +1,1 @@
+- [Locally patched dependencies](dependency-patches.md) — version-based audits still flag pnpm patches; verify exploit regressions rather than suppressing findings.
