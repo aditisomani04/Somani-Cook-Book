@@ -10,6 +10,8 @@ out-tsc
 
 # dependencies
 node_modules
+.pnpm-patch-work/
+/generated-artifacts/
 
 # IDEs and editors
 /.idea
